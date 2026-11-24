@@ -1,0 +1,26 @@
+﻿*** Begin Patch
+*** Update File: track.py
+@@ def main():
+     # --- 检查标定文件 ---
+     if not os.path.exists(HOMOGRAPHY_FILE):
+         print(f"[错误] 找不到标定文件 '{HOMOGRAPHY_FILE}'！")
+         print("  请先运行 map_calibrate.py 完成标定。")
+         sys.exit(1)
+ 
+     # --- 加载单应性矩阵 ---
+     data = np.load(HOMOGRAPHY_FILE)
+     H = data["H"]
+     print(f"已加载标定文件: {HOMOGRAPHY_FILE}")
+ 
++    # --- 加载摄像头内参（可选）---
++    camera_matrix = None
++    dist_coeffs = None
++    if os.path.exists("camera_calibrate.npz"):
++        cam_data = np.load("camera_calibrate.npz")
++        camera_matrix = cam_data["camera_matrix"]
++        dist_coeffs = cam_data["dist_coeffs"]
++        print("已加载摄像头内参，将自动校正镜头畸变")
++
+     # --- 初始化 ---
+     cap = cv2.VideoCapture(CAMERA_INDEX)
+*** End Patch

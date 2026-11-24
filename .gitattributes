@@ -1,0 +1,6 @@
+*.jpg binary
+*.png binary
+*.pdf binary
+*.docx binary
+*.npz binary
+*.rknn binary

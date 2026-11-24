@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.lic
+*.log
+.agents/
+.qoder/
+build/
+dist/
+test_output/
+/FPV_AR01.mp4
+/FPV_AR01.zip
