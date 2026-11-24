@@ -7,7 +7,7 @@
 - `datalane/Images/` 和 `datalane/Annotations/` 中的 4,755 对文件按文件名配对，标注值见 [`label_mapping.txt`](../datalane/label_mapping.txt)。
 - 原 `images/images/` 的 4,758 帧中，4,755 帧与配对原帧逐字节相同。其余 `frame_000974.jpg` 至 `frame_000976.jpg` 保存在 [`Unlabeled/`](../datalane/Unlabeled/)。两处合并即可得到原来的全部帧。
 - 保留各版本的 `.rknn` 文件和原路径，避免历史脚本加载不到对应资源。根目录的 `model.rknn` 与 `setupUI/` 下的默认检测权重相同；不要仅凭 [`label_list.txt`](../label_list.txt) 推定所有权重都使用同一标签表。
-- 原始 [`FPV_AR01.zip`](https://github.com/yuhuang007/smartCar_2026/releases/download/archive-2026/FPV_AR01.zip) 作为 Release 附件；解压后为单个 `FPV_AR01.mp4`。
+- [赛道演示视频](https://github.com/yuhuang007/smartCar_2026/releases/download/archive-2026/FPV_AR01-720p.mp4) 放在 Release，保留约 5 分 49 秒的完整时长。约 422 MiB 的原始 `FPV_AR01.zip` 留在本地。
 
 ## 未纳入 Git 的内容
 
